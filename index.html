@@ -1,50 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
     <title>Q Tips by psaris</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
   </head>
+
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/psaris/qtips">View On GitHub</a></li>
-          <li class="downloads"><a href="https://github.com/psaris/qtips/zipball/master">ZIP</a></li>
-          <li class="downloads"><a href="https://github.com/psaris/qtips/tarball/master">TAR</a></li>
-          <li class="title">DOWNLOADS</li>
-        </nav>
-      </div><!-- end header -->
 
-    <div class="wrapper">
+    <header>
+      <div class="container">
+        <h1>Q Tips</h1>
+        <h2>Source files for &quot;Q Tips: Fast, Scalable and Maintainable Kdb+&quot;</h2>
 
-      <section>
-        <div id="title">
-          <h1>Q Tips</h1>
-          <p>Source files for &quot;Q Tips: Fast, Scalable and Maintainable Kdb+&quot;</p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/psaris">psaris</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
+        <section id="downloads">
+          <a href="https://github.com/psaris/qtips/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/psaris/qtips/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/psaris/qtips" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
 
+    <div class="container">
+      <section id="main_content">
         <h1>
-<a id="q-tips" class="anchor" href="#q-tips" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q Tips</h1>
+<a id="q-tips" class="anchor" href="#q-tips" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Q Tips</h1>
 
 <p>This project contains the source files for "Q Tips: Fast, Scalable and Maintainable Kdb+".</p>
 
 <h2>
-<a id="the-book" class="anchor" href="#the-book" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Book</h2>
+<a id="the-book" class="anchor" href="#the-book" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Book</h2>
 
 <p><strong>Q Tips</strong> can be purchased on <a href="http://www.amazon.com/Tips-Fast-Scalable-Maintainable-Kdb/dp/9881389909">Amazon</a>.
 A <a href="http://www.amazon.com/Tips-Fast-Scalable-Maintainable-Kdb-ebook/dp/B00UZ8OMME">Kindle version</a> is also available.
@@ -54,14 +44,14 @@ Books may be purchased in quantity and/or special sales by contacting the publis
 <p>Check out Kx System's <a href="http://kx.com/press-releases-150325.php">press release</a>.</p>
 
 <h2>
-<a id="the-source" class="anchor" href="#the-source" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Source</h2>
+<a id="the-source" class="anchor" href="#the-source" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Source</h2>
 
 <p>Install <code>q</code> from Kx System's kdb+ download <a href="http://kx.com/software-download.php">page</a> and grab a copy of the <strong>Q Tips</strong> source.</p>
 
-<div class="highlight highlight-sh"><pre>$ git clone https://github.com/psaris/qtips</pre></div>
+<div class="highlight highlight-source-shell"><pre>$ git clone https://github.com/psaris/qtips</pre></div>
 
 <h2>
-<a id="the-cep-engine" class="anchor" href="#the-cep-engine" aria-hidden="true"><span class="octicon octicon-link"></span></a>The CEP Engine</h2>
+<a id="the-cep-engine" class="anchor" href="#the-cep-engine" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The CEP Engine</h2>
 
 <p>The following command starts the CEP engine on port 5001, 
 with a maximum workspace size of 200 Mb, 
@@ -69,16 +59,15 @@ the timer set to run every 100 ms,
 the end of day event set to run at 4:00 PM,
 and the directory to save the price, quote and tradeq tables set to 'qdb'.</p>
 
-<div class="highlight highlight-sh"><pre>$ q cep.q -p 5001 -w 200 -t 100 -eod 16:00 -db qdb</pre></div>
+<div class="highlight highlight-source-shell"><pre>$ q cep.q -p 5001 -w 200 -t 100 -eod 16:00 -db qdb</pre></div>
 
 <h2>
-<a id="the-errors" class="anchor" href="#the-errors" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Errors</h2>
+<a id="the-errors" class="anchor" href="#the-errors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The Errors</h2>
 
 <p>Any typos and errors are listed <a href="errata.adoc">here</a>.  The Kindle version has been updated to include all corrections.</p>
       </section>
-
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
     
   </body>
 </html>
